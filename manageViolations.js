@@ -121,7 +121,7 @@ exports.hasViolation = async(message) => {
 
       var viols = await exports.getViolations(message.author.id);
       await exports.sendDm(true, message.member, viols.length, message.content, exports.indicate(message.content))
-      await exports.addViol(message.member, message.content);
+      await exports.addViol(message.member, message.content, true);
       modlog.send(
         new Discord.RichEmbed()
         .setTitle("Violation in #" + message.channel.name)
