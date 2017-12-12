@@ -64,6 +64,7 @@ exports.sendDm = async(auto, member, prev, content, indicated) => {
 }
 
 module.exports.manualAddViol = async(message) => {
+  if (!message.member.roles.has("378906283727781888")) return;
   if ( false && !message.mentions.length) {
     message.reply("Invalid usage. Could not detect a mention. If you only have the ID put \\<@id>");
     return;
