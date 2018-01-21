@@ -1,3 +1,4 @@
-module.exports = function(target, replacement) {
-  return this.split(target).join(replacement);
+module.exports = function (target, replacement) {
+  return this.split(target)
+    .join(replacement);
 };
