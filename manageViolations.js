@@ -19,8 +19,9 @@ MongoClient.connect(url, {
 });
 exports.setClient = (_client) => {
   client = _client;
-  modlog = _client.guilds.get("300155035558346752")
-    .channels.get("380284981773336576")
+  modlog = _client.guilds.get("433009422990835716")
+    .channels.get("433090183122911232");
+  //console.log(modlog)
 };
 exports.getViolations = async (id) => db ? await db.collection("violations")
   .find({
@@ -56,7 +57,7 @@ exports.sendDm = async (auto, member, prev, content, indicated) => {
   }
 }
 module.exports.manualAddViol = async (message) => {
-  if (!message.member.roles.has("378906283727781888") && !message.member.roles.has("363891136533626890")) return;
+  if (!message.member.roles.has("433018096144482325") && !message.member.roles.has("363891136533626890")) return;
   if (false && !message.mentions.length) {
     message.reply("Invalid usage. Could not detect a mention. If you only have the ID put \\<@id>");
     return;
