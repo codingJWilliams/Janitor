@@ -16,5 +16,4 @@ client.on('message', msg => {
 client.on("messageUpdate", (oldm, newm) => {
   manageViolations.hasViolation(newm)
 })
-client.login(require("./token.json")
-  .token);
+client.login(require("./token.json").token);
